@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+function cal(val){
+    document.getElementById("main").value+=val;
+}
+
+function solve(){
+   var x= document.getElementById("main").value;
+   var y=eval(x);
+   document.getElementById("main").value=y;
+}
+
+function clr(){
+    document.getElementById("main").value="";
+}
+
+</script>
+</head>
+<style>
+input[type="button"]{
+    width: 100%;
+    height: 100%;
+   border-radius: 5px;
+   border-color: rgba(169, 169, 169, 0.589);
+}
+.main{
+    width: 300px;
+    height: 350px;
+     background-color: darkgray; 
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin: auto;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     
+
+}
+
+.child{
+    width: 250px;
+    height: 250px;
+    background-color: rgb(156, 163, 159);
+}
+.main table{
+    margin-left: 20px;
+    padding-top:0px ;
+    margin-top: 20px;
+    background-color: darkgrey;
+   
+}
+ .main table input{ 
+   height: 35px;
+ } 
+#dot{
+    font-size: 25px;
+    padding-top: -25px;
+    
+}
+ 
+
+</style>
+
+<body>
+    <div class="main">
+      
+        <div class="child">
+    <table>
+        <tr ><th colspan="3"><input type="text" id="main"></th>
+            <th><input type="button" value="c"   onclick="clr()"></th>
+        </tr>
+
+        <tr><th><input type="button" value="1" onclick="cal(1)"></th>
+            <th><input type="button" value="2" onclick="cal(2)"></th>
+            <th><input type="button" value="3" onclick="cal(3)"></th>
+            <th><input type="button" value="/" onclick="cal('/')"></th>
+        </tr>
+
+        <tr><th><input type="button" value="4"  onclick="cal(4)"></th>
+            <th><input type="button" value="5"  onclick="cal(5)"></th>
+            <th><input type="button" value="6"  onclick="cal(6)"></th>
+            <th><input type="button" value="*"  onclick="cal('*')"></th>
+        </tr>
+
+        <tr><th><input type="button" value="7"  onclick="cal(7)"></th>
+            <th><input type="button" value="8"  onclick="cal(8)"></th>
+            <th><input type="button" value="9"  onclick="cal(9)"></th>
+            <th><input type="button" value="+"  onclick="cal('+')"></th>
+        </tr>
+
+        <tr><th><input type="button" value="." id="dot" onclick="cal('.')"></th>
+            <th><input type="button" value="0"  onclick="cal(0)"></th>
+            <th><input type="button" value="="  onclick="solve()" </th>
+            <th><input type="button" value="-"  onclick="cal('-')"></th>
+        </tr>
+        
+    </table>
+</div>
+</div>
+</body>
+</html>
